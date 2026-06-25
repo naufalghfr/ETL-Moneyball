@@ -13,10 +13,10 @@ This project extracts data from two different sources, merges them together, doe
 
 ## Extract, Transform, Load
 1. **Extract:** - Reads raw player data from a local CSV dataset (Transfermarkt).
-   - Pulls additional dynamic data (like proposed market value and unique IDs) straight from the SofaScore API. This is done using automated looping with a built-in delay so the server doesn't block us.
+   - Pulls additional dynamic data (like proposed market value and unique IDs) straight from the SofaScore API. This is done using automated looping with a built-in delay so the server doesn't block.
    
 2. **Transform:** - Performs feature engineering to accurately calculate the players' ages based on the `date_of_birth` column.
-   - Applies the *Moneyball* filter: We only keep players who are 25 or younger with a market value strictly under €5,000,000.
+   - Applies the *Moneyball* filter: I only keep players who are 25 or younger with a market value strictly under €5,000,000.
    - Merges the CSV and JSON (API) data based on the player's name.
    
 3. **Load:** - Saves the final, cleaned data as a `.csv` file inside the `processed` folder.
